@@ -1,0 +1,22 @@
+@{
+    ViewBag.Title = "Fazer um Comentario";
+    Layout = "MasterPageLogado";
+}
+
+<h1>FeedBack</h1>
+
+<style>
+textarea{
+    resize: none;
+}
+</style>
+
+@ViewBag.Mensagem
+
+<form action="/Comentario/Comentar" method="POST">
+      
+     <textarea  name="comentario" rows="6" cols="50" required></textarea>
+    <input type="submit"    value="Enviar">
+    
+</form>
+

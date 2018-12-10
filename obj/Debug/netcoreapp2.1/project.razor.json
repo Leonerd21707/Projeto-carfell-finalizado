@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\FIC\\Documents\\Projetos_SENAI\\projetos\\Carfell_Area_de_Comentarios-master\\Senai.Sprint4.Carfel.csproj",
+  "TargetFramework": "netcoreapp2.1",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  }
+}

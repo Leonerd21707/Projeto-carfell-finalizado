@@ -1,0 +1,61 @@
+@using Senai.Sprint4.Carfel.Models;
+
+@{
+    ViewBag.Title = "Aprove ou Rejeite um comenttario";
+    Layout = "MasterPageLogado";
+}
+
+<h1>Seleção de comentarios</h1>
+
+<style>
+textarea{
+    resize: none;
+}
+</style>
+
+@ViewBag.Mensagem
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Comentario</th>
+            <th>Data Criação</th>
+            <th>Status</th>
+            <th>ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in ViewData["comentarios"] as List<ComentarioModel>)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Usuario.Nome
+                </td>
+                <td>
+                    @item.Comentario
+                </td>
+                <td>
+                    @item.DataCriacao.ToShortDateString()
+                </td>
+                <td>
+                    @item.Aprovado
+               </td>
+                <td>
+                    <a href="/Administrador/Alterar?id=@item.Id">
+                    @if(item.Aprovado){
+                       <p>Rejeitar</p>
+                    } else {
+                       <p>Aprovar</p>
+                    }
+                    </a>
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,29 @@
+@{
+    ViewBag.Title = "Cadastrar Administrador";
+    Layout = "MasterPageDeslogado";
+}
+
+<h1> Cadastro de Administradores</h1>
+
+@ViewBag.Mensagem
+
+<form action="/Administrador/Cadastrar" method="POST">
+    <label>
+        Nome
+        <input type="text"  name="nome">
+    </label>
+
+    <label>
+        Email
+        <input type="email" name="email">
+    </label>
+
+    <label>
+        Senha
+        <input type="password" name="senha">
+    </label>
+    
+
+    <input type="submit" value="Enviar">
+
+</form>

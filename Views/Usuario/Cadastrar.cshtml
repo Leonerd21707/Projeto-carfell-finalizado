@@ -1,0 +1,30 @@
+<link href="/css/CadastroUsuario.css" rel="stylesheet">
+@{
+    ViewBag.Title = "Cadastrar Usuário";
+    Layout = "MasterPageDeslogado";
+}
+
+<h1> Cadastro de Usuarios</h1>
+
+@ViewBag.Mensagem
+
+<form class="info"  action="/Usuario/Cadastrar" method="POST">
+    <label>
+        Nome
+        <input type="text"  name="nome">
+    </label>
+
+    <label>
+        Email
+        <input type="email" name="email">
+    </label>
+
+    <label>
+        Senha
+        <input type="password" name="senha">
+    </label>
+    
+
+    <input class="enviar" type="submit" value="Enviar">
+
+</form>
