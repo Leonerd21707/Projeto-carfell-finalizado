@@ -21,7 +21,24 @@ namespace Senai.Sprint4.Carfel.Repositorio {
             }
         }
         public ComentarioModel Alterar (ComentarioModel comentario) {
-            throw new System.NotImplementedException ();
+            
+            //Caso o usuario buscado tennha sido encontrado...
+            foreach (var item in lsComentario)
+            {
+                if(item.Id == comentario.Id){
+                    item.Aprovado = comentario.Aprovado;
+
+                    //Temos que atualizar o arquivo com a lista sem o objeto
+                    MemoryStream memoria = new MemoryStream();
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(memoria,lsComentario);
+                    File.WriteAllBytes(caminho, memoria.ToArray());
+
+                    return item;    
+                }
+            }              
+
+            return null;
         }
 
         public ComentarioModel BuscarPorId (int id) {
@@ -38,6 +55,12 @@ namespace Senai.Sprint4.Carfel.Repositorio {
         }
 
         public ComentarioModel Comentar (ComentarioModel comentario) {
+            if(lsComentario.Count > 0){
+                comentario.Id = lsComentario.Count + 1;
+            } else {
+                comentario.Id = 1;
+            }
+
             //salva o comentario na lista
             lsComentario.Add(comentario);
 

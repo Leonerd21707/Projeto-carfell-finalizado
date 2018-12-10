@@ -40,7 +40,14 @@ namespace Senai.Sprint4.Carfel.Controllers {
                 HttpContext.Session.SetString ("nomeUsuario", usuario.Nome.ToString ());
                 HttpContext.Session.SetString ("emailUsuario", usuario.Email.ToString ());
 
-                return RedirectToAction ("Comentar", "Comentario");
+                if (usuario.Administrador != false)
+                {
+                    return RedirectToAction ("Comentarios", "Administrador");
+                    
+                }else{
+                    return RedirectToAction ("Comentar", "Comentario");
+                }
+
             }
 
             ViewBag.Mensagem = "Usuário inválido";
