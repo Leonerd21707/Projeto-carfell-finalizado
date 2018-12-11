@@ -1,0 +1,12 @@
+body{
+    background-color: #405891;
+
+}
+h1{
+    text-align: center;
+}
+.feed{
+    margin-top: 140px;
+    padding: 1em;
+    border: solid 2px white;
+}

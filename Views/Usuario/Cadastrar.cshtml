@@ -1,12 +1,16 @@
-<link href="/css/CadastroUsuario.css" rel="stylesheet">
+@section styles{
+    <link href="/css/Cadastrousuario.css" rel="stylesheet" type="text/css" />
+    }
 @{
     ViewBag.Title = "Cadastrar Usuário";
     Layout = "MasterPageDeslogado";
 }
 
-<h1> Cadastro de Usuarios</h1>
 
 @ViewBag.Mensagem
+<div class="cadastro">
+    <h1> Cadastro de Usuarios</h1>
+
 
 <form class="info"  action="/Usuario/Cadastrar" method="POST">
     <label>
@@ -28,3 +32,4 @@
     <input class="enviar" type="submit" value="Enviar">
 
 </form>
+</div>

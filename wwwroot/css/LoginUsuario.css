@@ -41,12 +41,12 @@ h1 {
     font-size: 42px;
 }
 
-.cadastro {
+.logar {
     margin-top: 50px;
     border-style: solid;
     border-color: white;
     width: 390px;
-    margin-left: 500px;
+    margin-left: 600px;
     padding: 65px;
 }
 
@@ -59,7 +59,9 @@ input {
     width: 216px;
     height: 32px;
 }
-
+.enter{
+    transform: translateX(3px);
+}
 .enviar {
     margin: 50px;
     width: 120px;
@@ -68,4 +70,8 @@ input {
 
 label {
     color: white;
+}
+span {
+    color: red;
+    font-size: 17px;
 }

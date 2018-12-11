@@ -5,12 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> @ViewBag.Title </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/css/main.css" rel="stylesheet" type="text/css" />
+    @RenderSection("styles", required: false)
+
 </head>
 <body>
     <div class="links">
-    <a href="/Usuario/Cadastrar">Cadastrar Usuário</a>
+        <div class="cadSup">
+    <a  href="/Usuario/Cadastrar">Cadastrar Usuário</a>
+        </div>
+        <div class="logSup" >
     <a href="/Usuario/Login">Efetuar Login</a>
+        </div>
     </div>
 
     @RenderBody()

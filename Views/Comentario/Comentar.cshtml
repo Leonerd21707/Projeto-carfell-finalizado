@@ -1,13 +1,19 @@
+@section styles{
+    <link href="/css/comentarios.css" rel="stylesheet" type="text/css" />
+    }
 @{
     ViewBag.Title = "Fazer um Comentario";
     Layout = "MasterPageLogado";
 }
-
-<h1>FeedBack</h1>
+<div class="feed">
+<h1>Comentarios</h1>
 
 <style>
 textarea{
+     margin-left: 33%;
     resize: none;
+     height: 275px;
+    width: 565px;
 }
 </style>
 
@@ -19,4 +25,6 @@ textarea{
     <input type="submit"    value="Enviar">
     
 </form>
+</div>
+
 

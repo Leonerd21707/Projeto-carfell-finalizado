@@ -1,15 +1,17 @@
+@section styles{
+    <link href="/css/LoginUsuario.css" rel="stylesheet" type="text/css" />
+    }
 @{
     ViewBag.Title = "Login";
     Layout = "MasterPageDeslogado";
 }
 
-<link href="/css/login.css" rel="stylesheet" type="text/css"/>
-
+<div class="logar">
 <h1>Login</h1>
 
-@ViewBag.Mensagem
 
-<form action="/Usuario/Login" method="POST">
+
+<form class="info" action="/Usuario/Login" method="POST">
     <label  >
         Email
         <input type="text" name="email" required="true">
@@ -19,5 +21,8 @@
         <input type="password" name="senha" required="true">
     </label>
 
-    <input type="submit" value="Entrar">
+   <span> @ViewBag.Mensagem </span>
+
+    <input class="enter" type="submit" value="Entrar">
 </form>
+</div>
